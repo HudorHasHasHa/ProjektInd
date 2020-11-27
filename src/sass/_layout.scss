@@ -2,6 +2,17 @@
 
 .pages > div:target  { display: block;}
 
+h3{
+  font-size: 26px;
+}
+
+a{
+  font-size: 22px;
+}
+
+input{
+  font-size: 16px;
+}
 //GLOBAL STYLES STARTS
 ul{
   list-style-type: none;
@@ -32,7 +43,7 @@ body{
   z-index: 1;
   position: fixed;
   height: 100%;
-  min-width: 180px;
+  min-width: 240px;
   background-color: black;
   background-size: auto;
   margin-left: 0;
@@ -45,7 +56,9 @@ body{
 
     a img{
       vertical-align: middle;
-      align-items: center;
+      margin: auto;
+      width: 25px;
+      height: 25px;
     }
 
     h2{
@@ -53,11 +66,6 @@ body{
       color: #ffffff;
     }
   }
-}
-
-.top-navbar-border{
-  padding-bottom: 15px;
-  border-bottom: 1px lightgray solid;
 }
 
 .list {
@@ -71,12 +79,16 @@ body{
     padding-left: 15px;
     height: 40px;
     vertical-align: middle;
+    line-height: 40px;
 
     a{
-      line-height: 40px;
       text-decoration: none;
       font-size: 16px;
       color: #ffffff;
+
+      img{
+        margin-right: 15px;
+      }
     }
   }
 }
@@ -103,7 +115,7 @@ body{
 .container .top-navbar{
   z-index: 0;
   position: fixed;
-  height: 60px;
+  height: 80px;
   width: 100%;
   background-color: white;
   background-size: auto;
@@ -119,11 +131,11 @@ body{
 }
 
 .inner-wrapper{
+  min-height: 80px;
   float: right;
 }
 
 .inner-wrapper div{
-  height: 100%;
   width: auto;
 }
 
@@ -146,8 +158,8 @@ body{
 .top-navbar .inner-wrapper img{
   vertical-align: middle;
   margin: auto;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   padding: 0 5px 0 5px;
 }
 
@@ -155,13 +167,17 @@ body{
 
 // General START //
 
-// .main-content{
-//   margin-left: 180px;
-//   margin-top: 60px;
-// }
+.section-wrapper{
+  padding: 0 15% 0 15%;
+}
 
 .main-content{
-  background-color: lightgray;
+  margin-left: 240px;
+  margin-top: 80px;
+}
+
+.main-content{
+  background-color: $background-color;
   padding: 15px;
 }
 
@@ -172,7 +188,6 @@ body{
 //ROW 1 START//
 .content {
   .title{
-    border-bottom: 1px solid lightgray;
     border-width: 100%;
     padding: 1px 0 1px 5px;
 
@@ -304,6 +319,8 @@ body{
   @include grid('xl');
 }
 
+
+// DATE PICKER 
 .date{
   min-height: 80px;
   vertical-align: middle;
@@ -311,8 +328,112 @@ body{
   justify-items: center;
   align-items: center;
   text-align: center;
+  
+  div{
+    // min-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+
+  }
 }
 
-.date-content p {
-  align-items: center;
+.position-wrapper{
+  // margin: 0 30px 0 30px;
+  justify-content: space-between;
+  // grid-gap: 40px;
+}
+
+.position-items{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-list{
+  justify-content: space-between;
+
+  .row{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    color: lightgray;
+  }
+
+  div li{
+    text-align: center;
+  }
+}
+// DATE PICKER ENDS
+
+//CHART STARTS
+.chart{
+  min-height: 400px;
+}
+
+//CHART ENDS
+
+
+// LINKS START
+// .links-content-section{
+//   min-height: 60px;
+// }
+
+// .links .main-content{
+//   min-height: 60px;
+// }
+
+// .links .main-content h3{ 
+//   margin: 0px;
+// }
+.links-wrapper a{
+  text-decoration: none;
+}
+
+.links-wrapper .position-items .links-links{ 
+  line-height: 100%;
+  vertical-align: middle;
+
+  a{
+    margin: auto;
+    margin-right: 0;
+    vertical-align: middle;
+  }
+}
+
+.links-icon{
+  line-height: 60px;
+  justify-content: center;
+  vertical-align: middle;
+
+  a{
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  img{
+    display: none;
+    vertical-align: middle;
+    margin: auto;
+  }
+}
+
+.position-items:hover{
+  background-color: lightblue;
+
+  .links-icon img{
+    display: inline;
+  }
 }

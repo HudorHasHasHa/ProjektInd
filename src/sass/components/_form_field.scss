@@ -1,0 +1,112 @@
+// BORDERS //
+.date-border{
+  border-bottom: 1px solid $border-color;
+}
+
+.content {
+  .title{
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.top-navbar{
+  padding-bottom: 15px;
+  border-bottom: 2px $border-color solid;
+}
+
+.general-border-1{
+  border-bottom: 1px solid $border-color;
+}
+
+.link-border-1{
+  border-top: 1px solid $border-color;
+}
+
+.link-border-1{
+  border-bottom: 1px solid $border-color;
+}
+
+//BORDERS END
+
+// BUTTONS
+ul li .Signups::before {
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul li .FTD::before {
+  content: "\2022";
+  color: orange;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul li .Earned::before {
+  content: "\2022";
+  color: green;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.links-button a{
+  text-decoration: none;
+  color: white;
+  background-color: orange;
+  padding: 5px 15px;
+  border-radius: 5%;
+}
+
+// BUTTONS END
+
+// DATE PICKER START
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.date-picker{
+  border: 1px solid grey;
+  padding: 5px;
+
+  .start{
+    border: none;
+    border-right: 1px solid grey;
+
+    input{
+      border: none;
+    }
+  }
+
+  .end{
+    background: url(https://svgshare.com/i/Rnr.svg)  95% 50% no-repeat ;
+    background-size: 15px 15px;
+    border: none;
+  }
+}
+
+// DATE PICKER ENDS
+
+//LINKS START
+.links .main-content{
+  margin-top: 0;
+}
+
+.button-4{
+  min-height: 60px;
+  justify-content: center;
+
+  div{
+    line-height: 60px;
+    text-align: center;
+    text-align: center;
+  }
+}
+
+//LINKS ENDS

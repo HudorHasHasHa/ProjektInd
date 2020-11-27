@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pizzeria</title>
+    <title>tak</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
         rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
@@ -14,31 +14,219 @@
 
 <body>
     <div class="container">
+        <div class="wrapper">
+            <nav class="side-nav">
+              <div class="side-header">
+                  <h2>Just do it</h2>
+                  <a class="drop-down-menu"><img src="images/icons/menu.svg"/></a>
+              </div>
+              <div class="top-navbar-border menu-content">
+                <ul class="list">
+                    <li><a href="#general"><img src="images/icons/sidebar/general.svg" alt="1" />General</a></li>
+                    <li><a href="#details"><img src="images/icons/sidebar/details.svg" alt="1" />Details</a></li>
+                    <li><a href="#links"><img src="images/icons/sidebar/links.svg" alt="1" />Links</a></li>
+                    <li><a href="#banners"><img src="images/icons/sidebar/banners.svg" alt="1" />Banners</a></li>
+                    <li><a href="#personal-data"><img src="images/icons/sidebar/personaldata.svg" alt="1" />Personal Data</a></li>
+                    <li><a href="#payout"><img src="images/icons/sidebar/payout.svg" alt="1" />Payout</a></li>
+                    <li><a href="#post-back"><img src="images/icons/sidebar/postback.svg" alt="1" />Postback</a></li>
+                </ul>
+              </div>
+            </nav>
+            <nav class="top-navbar">
+              <div class="inner-wrapper">
+                <a id="wallet"><img src="images/icons/wallet.svg"/>$1,500.00<img src="images/icons/arrow-down-small.svg"/></a>
+                <a id="notification"> <img src="images/icons/notification.svg"/></a>
+                <a id="username"><img src="images/icons/profile.svg"/></a>
+                <a id="logout"> <img src="images/icons/quit.svg"/></a>
+              </div>
+            </nav>
+          </div>
         <main class="main-content">
             <div class="content">
-                <div class="row">
-                    <div class="title">
-                        <h3>Lorenso garcia</h3>
+                <div class="title">
+                    <h3>Lorenso garcia</h3>
+                </div>
+                <div class="section-wrapper date-border">
+                    <div class="row">
+                    </div>
+                    <div class="row date col-sm-12">
+                        <div class="row col-sm-6 date-picker">
+                            <div class="col-sm-6 start">
+                                <input class="" type="date" id="start" min="2020-11-25" max="2021-12-31">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="end" type="date" id="start" min="2020-11-25" max="2021-12-31">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 date-icon">
+                            <a><img src="images/icons/wallet.svg" alt="img" /></a>
+                        </div>
                     </div>
                 </div>
-                <div class="row date col-sm-12">
-                    <div class="row col-sm-3">
-                        <div class="col-sm-6 date-content">
-                            <p>gr</p>
+                <div class="section-wrapper">
+                    <div class="row position-wrapper">
+                        <div class="col-sm-5">
+                            <div class="row position-items general-border-1">
+                                <h3>Visit Signups</h3>
+                                <h3>124</h3>
+                            </div>
+                            <div class="row position-items general-border-1">
+                                <h3>FTD</h3>
+                                <h3>445</h3>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <p>ger</p>
+                        <div class="col-sm-5">
+                            <div class="row position-items general-border-1">
+                                <h3>Net deposit</h3>
+                                <h3>564</h3>
+                            </div>
+                            <div class="row position-items general-border-1">
+                                <h3>Turn over</h3>
+                                <h3>432</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-1 date-col date-content">
-                        <a><img alt="img"/></a>
+                    <div>
+                        <h3>Earnings Chart</h3>
+                        <div class="buttons-list">
+                            <ul class="row"> 
+                                <div class="col-sm-2"><li><a href="#" class="button Signups" id="Signups">Signups</a></li></div>
+                                <div class="col-sm-2"><li><a href="#" class="button FTD" id="FTD">FTD</a></li></div>
+                                <div class="col-sm-2"><li><a href="#" class="button Earned" id="Earned">Earned</a></li></div>
+                            </ul>
+                        </div>
+                        <div class="chart">
+                        
+                        </div>
                     </div>
-                </div>
-                <div>
-                    
                 </div>
             </div>
         </main>
+        <div class="links">
+            <div class="main-content">
+                <div class="content">
+                    <div class="title .links-content-section">
+                        <h3>Links</h3>
+                    </div>
+                    <div class="section-wrapper .links-content-section">
+                        <div>
+                            <div class="row button-4">
+                                <div class="col-sm-3 links-button">
+                                    <a href="#">+ add new</a>
+                                </div>
+                            </div>
+                            <div class="links-wrapper">
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row  links-links">
+                                        <h3 class="col-sm-5">Home page</h3>
+                                        <a  class="col-sm-5" href="#">http://www.homepage.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row  links-links">
+                                        <h3 class="col-sm-5">Currently offer</h3>
+                                        <a  class="col-sm-5" href="#">http://www.currently.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">Blurpix</h3>
+                                        <a  class="col-sm-5" href="#">http://www.blurpix.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">yoursite</h3>
+                                        <a  class="col-sm-5" href="#">http://www.yoursite.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">google</h3>
+                                        <a  class="col-sm-5" href="http://www.google.com">http://www.google.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">facebook</h3>
+                                        <a  class="col-sm-5" href="#">http://www.facebook.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">dashboard</h3>
+                                        <a  class="col-sm-5" href="#">http://www.dashboard.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">blurax</h3>
+                                        <a  class="col-sm-5" href="#">http://www.blurax.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-1">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">piece of wine</h3>
+                                        <a  class="col-sm-5" href="#">http://www.pieceofwine.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                                <div class="row position-items link-border-2">
+                                    <div class="col-sm-8 row links-links">
+                                        <h3 class="col-sm-5">twitter</h3>
+                                        <a  class="col-sm-5" href="#">http://www.twitter.com</a>
+                                    </div>
+                                    <div class="col-sm-2 row links-icon">
+                                        <a href="#" class="col-sm-4"><img src="images/icons/links2.svg"></a>
+                                        <a href="#" class="col-sm-4"><img src="images/icons/trash.svg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row button-4">
+                                <div class="col-sm-3 links-button">
+                                    <a href="#">+ add new</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
