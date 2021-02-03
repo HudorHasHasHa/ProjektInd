@@ -11,7 +11,8 @@ document.querySelector('.side-nav-button').addEventListener('click', function(e)
   toggleMenu();
 });
 
-overlay.addEventListener('click', function() {
+overlay.addEventListener('click', function(e) {
+  e.preventDefault();
   toggleMenu();
   overlay.classList.remove('is-active');
 });

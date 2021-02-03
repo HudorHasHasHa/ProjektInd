@@ -330,6 +330,20 @@ body{
 
 @media(max-width: 767px) {
   @include grid('sm');
+
+  .container .top-navbar{
+    max-height: 41px;
+    min-height: 41px;
+    .inner-wrapper{
+      min-height: 41px;
+      max-height: 41px;
+      a{
+        padding: 0 8px;
+        vertical-align: middle;
+      }
+    }
+  }
+
   h3{
     font-size:14px;
   }
@@ -351,17 +365,14 @@ body{
       color: black;
       font-weight: 900;
       background-color: white;
-      border: solid black 1px;
+      border: 0;
       padding: 12px;
     }
   }
 
   .main-content{
-
-    
-
     margin: auto;
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .container .side-nav {
       
