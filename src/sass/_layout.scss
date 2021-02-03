@@ -48,8 +48,20 @@ body{
   background-size: auto;
   margin-left: 0;
   padding: 0;
+  
+  .close {
+    display: none;
+  }
 
   .side-header {
+
+    .button{
+      background-color: black;
+      .close{
+        display: none;
+      }
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -112,6 +124,21 @@ body{
 //SIDE NAV HOVER END
 
 //TOP NAV START
+.side-nav-button{
+  display: none;
+  color: #fff;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border: none;
+  top: 0;
+  right: -40px;
+  cursor: pointer;
+  padding: 0;
+  color: #fff;
+}
+
 .container .top-navbar{
   z-index: 0;
   position: fixed;
@@ -174,9 +201,6 @@ body{
 .main-content{
   margin-left: 240px;
   margin-top: 80px;
-}
-
-.main-content{
   background-color: $background-color;
   padding: 15px;
 }
@@ -280,6 +304,7 @@ body{
   padding-right: 15px;
 }
 
+// RESPONSYWNY GRID START //
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -305,6 +330,128 @@ body{
 
 @media(max-width: 767px) {
   @include grid('sm');
+  h3{
+    font-size:14px;
+  }
+
+  .side-nav-button{
+    display: inline-block;
+  }
+
+  .drop-down-menu{
+    display: none;
+  }
+
+  .buttons-list{
+    display: block;
+  }
+
+  .button{
+    .fa, .fas {
+      color: black;
+      font-weight: 900;
+      background-color: white;
+      border: solid black 1px;
+      padding: 12px;
+    }
+  }
+
+  .main-content{
+
+    
+
+    margin: auto;
+    margin-top: 80px;
+  }
+  .container .side-nav {
+      
+    transform: translate(-100%);
+  transition: transform 0.8s ease-in-out;
+    h2{
+      display: none;
+    }
+    max-height: 78px;
+    min-width: 0px;
+    max-width: 0px;
+
+    &.show{
+      transform: translateX(0);
+      
+      .close {
+        display: inline;
+      }
+      
+      .open {
+        display: none;
+      }
+
+      z-index: 2;
+      h2{
+        display: inline-block;
+      }
+      min-width: 240px;
+      max-width: 240px;
+      .side-header{
+        padding-top:0;
+      }
+    }
+    .side-header{
+      top: 40%;
+      padding-top: 23px;
+      padding-right: 4px;
+      max-width: 180px;
+    }
+    .menu-content{
+      transform: translateX(-100%);
+      display: none;
+      &.show{
+        display: inline-block;
+        transform: translateX(0);
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 240px;
+        height: 100vh;
+        background: #000;
+        color: #fff;
+        z-index: 2;
+      }
+    }
+  }
+
+  .links-wrapper .position-items .links-links{ 
+    line-height: 100%;
+    vertical-align: middle;
+    h3{
+      font-size: 16px;  
+    }
+
+    a{
+      font-size: 14px;
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#000, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+    
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    @media(min-width: 1024px) {
+      display: none;
+    }
+  }
 }
 
 @media(min-width: 768px) {
@@ -319,6 +466,8 @@ body{
   @include grid('xl');
 }
 
+
+// RESPONSYWNY GRID END //
 
 // DATE PICKER 
 .date{
@@ -363,6 +512,8 @@ body{
   }
 
   a{
+    background-color: $background-color;
+    padding: 5px 20px;
     text-decoration: none;
     color: black;
   }
@@ -379,7 +530,15 @@ body{
 
 //CHART STARTS
 .chart{
-  min-height: 400px;
+  margin-top: 70px;
+  min-height: 360px;
+}
+
+.chart-image{
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 //CHART ENDS
