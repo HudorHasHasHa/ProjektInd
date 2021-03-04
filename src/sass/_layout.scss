@@ -49,7 +49,12 @@ body{
   background-size: auto;
   margin-left: 0;
   padding: 0;
-  
+
+  .top-navbar-border{
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid lightgray;
+  }
+
   .close {
     display: none;
   }
@@ -76,6 +81,47 @@ body{
 
     h2{
       padding-left: 15px;
+      color: #ffffff;
+    }
+  }
+
+  .manager-header{
+    h2{
+      font-size: 1.2em;
+      padding-left: 15px;
+      color: #ffffff;
+    }
+  }
+
+  .manager-content{
+    vertical-align: middle;
+    padding-left: 8%;
+    li{
+      vertical-align: middle;
+    }
+    img{
+      position: relative;
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      margin-right: 0;
+    }
+
+    .green-dot{
+      background-color: green;
+      width: 12px;
+      height: 12px;
+      position: relative;
+      border-radius: 50%;
+      left: 69%;
+      top: 15%;
+      z-index: 2;
+    }
+
+    a{
+      font-size: 1em;
+      padding-left: 5%;
+      padding-top: 10%;
       color: #ffffff;
     }
   }
@@ -153,7 +199,7 @@ body{
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 17px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -180,15 +226,24 @@ body{
 
   a{
     color: black;
+    border-left: 1px solid lightgray;
   }
+}
+
+#wallet{
+  padding: 0 5px 6px 5px;
 }
 
 .top-navbar .inner-wrapper img{
   vertical-align: middle;
   margin: auto;
   width: 40px;
-  height: 40px;
-  padding: 0 5px 0 5px;
+  height: 45px;
+  padding: 0 5px 2px 5px;
+  @media (max-width: 425px) {
+    height: 38px;
+    width: 30px;
+  }
 }
 
 //TOP NAVBAR END//
@@ -214,7 +269,7 @@ body{
 .content {
   .title{
     border-width: 100%;
-    max-height: 30px;
+    max-height: 80px;
     padding: 1px 0 47px 5px;
 
     h3{
@@ -330,22 +385,77 @@ body{
   }
 }
 
-@media(max-width: 400px){
+@media(max-width: 425px){
   @include grid('xs');
 
   .date-picker{
     display: block;
     max-width: 60px;
     margin: 0;
+
     .start{
       margin: 0;
     }
   }
 
+  .buttons-list {
+    div{
+      min-width: 30%;
+    }
+
+    a{
+      font-size: 11px;
+    }
+  }
+
+  .links-wrapper .position-items{
+    .links-links{
+      display: block;
+
+      h3{
+        font-size: 12px;
+        // padding-top: 9px;
+        padding-top: 0px;
+        margin: 8px 0;
+      }
+
+      a{
+        font-size: 12px;
+      }
+    }
+
+    .links-icon{
+      display: block;
+      line-height: 25px;
+
+      a{
+        bottom: 25px;
+        display: block;
+        height: 23px;
+
+        img{
+          width: 15px;
+          height: 15px;
+          padding: 0 2px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .buttons-list .ftd{
+    padding-left: 6px;
+  }
 }
 
 @media(max-width: 767px) {
   @include grid('sm');
+
+  .content{
+    .title{
+      max-height: 40px;
+    }
+  }
 
   .input{
     font-size: 12px;
@@ -361,7 +471,7 @@ body{
       max-height: 41px;
 
       a{
-        padding: 0 8px;
+        padding: 1px 6px;
         vertical-align: middle;
       }
     }
@@ -458,20 +568,74 @@ body{
         z-index: 2;
       }
     }
+
+    .manager{
+      display: none;
+
+      .manager-header{
+        h2{
+          
+        }
+      }
+
+      .manager-content{
+        vertical-align: middle;
+        padding-left: 8%;
+        li{
+          vertical-align: middle;
+        }
+        img{
+          position: relative;
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          margin-right: 0;
+        }
+    
+        .green-dot{
+          background-color: green;
+          width: 11px;
+          height: 11px;
+          position: relative;
+          border-radius: 50%;
+          left: 57%;
+          top: 20%;
+          z-index: 2;
+        }
+    
+        a{
+          font-size: 1em;
+          padding-left: 5%;
+          padding-top: 10%;
+          color: #ffffff;
+        }
+      }
+      &.show{
+        display: inline-block;
+        transform: translateX(0);
+        position: fixed;
+        top: 360px;
+        left: 0;
+        width: 240px;
+        height: 100vh;
+        color: #fff;
+        z-index: 2;
+      }
+    }
   }
 
-  .links-wrapper .position-items .links-links{ 
-    line-height: 100%;
-    vertical-align: middle;
+  // .links-wrapper .position-items .links-links{ 
+  //   line-height: 100%;
+  //   vertical-align: middle;
 
-    h3{
-      font-size: 16px;  
-    }
+  //   h3{
+  //     font-size: 16px;  
+  //   }
 
-    a{
-      font-size: 14px;
-    }
-  }
+  //   a{
+  //     font-size: 14px;
+  //   }
+  // }
 
   .overlay {
     position: fixed;
@@ -498,6 +662,10 @@ body{
 
 @media(min-width: 768px) {
   @include grid('md');
+
+  .buttons-list div li a{
+    display: inline-block;
+  }
 }
 
 @media(min-width: 992px) {
@@ -508,6 +676,28 @@ body{
   @include grid('xl');
 }
 
+@media (max-width: 1023px){
+  .links-links{
+    h3{
+      padding-top: 6px;
+      font-size: 15px;
+    }
+
+    a{
+      font-size: 14px;
+    }
+  }
+
+  .links-icon{
+    a{
+      img{
+        width: 20px;
+        height: 20px;
+        padding: 0 2px;
+      }
+    }
+  }
+}
 
 // RESPONSYWNY GRID END //
 
@@ -531,6 +721,7 @@ body{
 .position-wrapper{
   // margin: 0 30px 0 30px;
   justify-content: space-between;
+  padding-bottom: 15px;
   // grid-gap: 40px;
 }
 
@@ -546,7 +737,7 @@ body{
     margin: 0;
     padding: 0;
     justify-content: center;
-    grid-gap: 20px;
+    grid-gap: 0px;
   }
 
   ul {
@@ -555,7 +746,7 @@ body{
 
   a{
     background-color: $background-color;
-    padding: 5px 20px;
+    padding: 5px 5px 5px 18px;
     text-decoration: none;
     color: black;
   }
@@ -605,6 +796,7 @@ body{
 .links-wrapper .position-items .links-links{ 
   line-height: 100%;
   vertical-align: middle;
+  min-height: 56px;
 
   a{
     margin: auto;
@@ -631,9 +823,17 @@ body{
   }
 }
 
-.position-items:hover{
-  background-color: lightblue;
+@media (min-width: 1024px){
+  .position-items:hover{
+    background-color: lightblue;
 
+    .links-icon img{
+      display: inline;
+    }
+  }
+}
+
+@media (max-width: 1024px){
   .links-icon img{
     display: inline;
   }

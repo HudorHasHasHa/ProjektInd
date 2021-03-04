@@ -18,7 +18,7 @@
   border-bottom: 1px solid $border-color;
 }
 
-.link-border-1{
+.link-border{
   border-top: 1px solid $border-color;
 }
 
@@ -62,6 +62,9 @@ ul li .Earned::before {
   background-color: orange;
   padding: 5px 15px;
   border-radius: 5%;
+  @media (max-width: 768px){
+    font-size: 14px;
+  }
 }
 
 // BUTTONS END
@@ -74,13 +77,29 @@ ul li .Earned::before {
 .date-picker{
   border: 1px solid grey;
   padding: 5px;
+  @media (max-width: 767px){
+    max-width: 160px;
+  }
+  @media (max-width: 768px){
+    input{
+      font-size: 14px;
+    }
+  }
 
   .start{
     border: none;
     border-right: 1px solid grey;
+    @media (max-width: 425px){
+      border-right: 0px;
+    }
 
     input{
       border: none;
+      @media(max-width: 425px){
+        background: url(https://svgshare.com/i/Rnr.svg) 95% 50% no-repeat;
+        background-size: 15px 15px;
+        border: none;
+      }
     }
   }
 

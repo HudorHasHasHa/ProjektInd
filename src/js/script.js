@@ -3,6 +3,7 @@ const overlay = document.querySelector('.overlay');
 function toggleMenu(visible) {
   document.querySelector('.menu-content').classList.toggle('show', visible);
   document.querySelector('.side-nav').classList.toggle('show', visible);
+  document.querySelector('.manager').classList.toggle('show', visible);
 }
 
 document.querySelector('.side-nav-button').addEventListener('click', function(e) {
