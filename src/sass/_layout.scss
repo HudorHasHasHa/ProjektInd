@@ -96,9 +96,11 @@ body{
   .manager-content{
     vertical-align: middle;
     padding-left: 8%;
+
     li{
       vertical-align: middle;
     }
+
     img{
       position: relative;
       border-radius: 50%;
@@ -572,18 +574,20 @@ body{
     .manager{
       display: none;
 
-      .manager-header{
-        h2{
+      // .manager-header{
+      //   h2{
           
-        }
-      }
+      //   }
+      // }
 
       .manager-content{
         vertical-align: middle;
         padding-left: 8%;
+
         li{
           vertical-align: middle;
         }
+
         img{
           position: relative;
           border-radius: 50%;
@@ -610,6 +614,7 @@ body{
           color: #ffffff;
         }
       }
+
       &.show{
         display: inline-block;
         transform: translateX(0);
